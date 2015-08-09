@@ -15,8 +15,8 @@ endif
 " -----------------------------
 " File Locations
 " -----------------------------
-set backupdir=~/.vim/.backup// " Double // causes backups to use full file path
-set directory=~/.vim/.tmp//
+"set backupdir=~/.vim/.backup// " Double // causes backups to use full file path
+"set directory=~/.vim/.tmp//
 set spellfile=~/.vim/spell/custom.en.utf-8.add
 " Persistent Undo
 if has('persistent_undo')
@@ -50,13 +50,13 @@ endif
 " Behaviors
 " ---------------
 syntax enable
-set backup             " Turn on backups
+set nobackup           " Turn off backups
 set autoread           " Automatically reload changes if detected
 set wildmenu           " Turn on WiLd menu
 set hidden             " Change buffer - without saving
 set history=768        " Number of things to remember in history.
 set cf                 " Enable error files & error jumping.
-set clipboard+=unnamed " Yanks go on clipboard instead.
+" set clipboard+=unnamed " Yanks go on clipboard instead.
 set autowrite          " Writes on make/shell commands
 " set timeoutlen=450     " Time to wait for a command (after leader for example).
 set ttimeout
