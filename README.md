@@ -1,4 +1,4 @@
-# The Vim Configuration of Champions
+# Tweaked Version of ["The Vim Configuration of Champions"](https://github.com/mutewinter/dot_vim/)
 
 Version 3! Now each plugin is included and managed in its
 [own file](vundle_plugins)!
@@ -9,27 +9,15 @@ Version 3! Now each plugin is included and managed in its
 
 ## Installation
 
-1. `git clone http://github.com/mutewinter/dot_vim.git ~/.vim`.
+1. `git clone http://github.com/tednaleid/dot_vim.git ~/.vim`.
 1. `cd ~/.vim`.
 
-Now you have a choice. The automated script or the manual process.
-
 1. Run `scripts/setup`.
-
-**or**
-
-1. `rake vim:link` to make the `.vimrc` and `.nvimrc` symbolic links.
-2. Install [Vundle](https://github.com/gmarik/vundle) with `git clone
-   http://github.com/gmarik/vundle.git bundle/vundle`
-3. `vim +PluginInstall +qall`
-
-Enjoy enhanced productivity, increased levitation, reduced watermelon-related
-accidents, and startling sex appeal.
 
 ## Vim Requirements
 
 * [NeoVim](https://github.com/neovim/neovim) or
-  [MacVim](https://github.com/b4winckler/macvim) - I'm currently using NeoVim
+  [MacVim](https://github.com/b4winckler/macvim)
   [via Homebrew](https://github.com/neovim/neovim/wiki/Installing) on OS X
   Yosemite.
 
@@ -46,11 +34,10 @@ dependencies.
 * [Ag.vim](https://github.com/rking/ag.vim) Requires
   [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) to be
   installed.
+  * `brew install the_silver_searcher`
 * [Source Code for Powerline](http://git.io/H3fYBg) The custom font I'm using
   for vim-airline.
-* [CtrlP C Matching Extension](https://github.com/JazzCore/ctrlp-cmatcher)
-  requires compilation. See the steps [in its
-  readme](https://github.com/JazzCore/ctrlp-cmatcher).
+  * clone the repo and run `./install.sh`
 * [underscore-cli](https://github.com/ddopson/underscore-cli) for sweet JSON
   formatting.
 
