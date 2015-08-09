@@ -29,7 +29,7 @@ endif
 " ---------------
 set ruler          " Ruler on
 set number         " Line numbers on
-set nowrap         " Line wrapping off
+set wrap           " Line wrapping on
 set laststatus=2   " Always show the statusline
 set cmdheight=2    " Make the command area two lines high
 set encoding=utf-8
@@ -110,12 +110,18 @@ set listchars=""
 set listchars=tab:▸▸
 " show trailing spaces as dots
 set listchars+=trail:•
+" show eol
+set listchars+=eol:¬
 " The character to show in the last column when wrap is off and the line
 " continues beyond the right of the screen
 set listchars+=extends:>
 " The character to show in the last column when wrap is off and the line
-" continues beyond the right of the screen
+" continues beyond " BufExplorer
+" open bufexplorer and move to last file
+nnoremap <D-e> :BufExplorer<CR>jthe right of the screen
 set listchars+=precedes:<
+
+set cursorline
 
 " ---------------
 " Sounds

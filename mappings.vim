@@ -4,7 +4,7 @@
 
 " Set leader to ,
 " Note: This line MUST come before any <leader> mappings
-let mapleader=","
+let mapleader=" "
 let maplocalleader = "\\"
 
 " -----------------------
@@ -53,36 +53,36 @@ nnoremap ' `
 nnoremap ` '
 
 " Don't move on *
-nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
+" nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>
 
 " ---------------
 " Window Movement
 " ---------------
-nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
-nnoremap <silent> <M-h> :wincmd h<CR>
-nnoremap <silent> gj :WriteBufferIfNecessary<CR>:wincmd j<CR>
-nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
-nnoremap <silent> <M-k> :wincmd k<CR>
-nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
-nnoremap <silent> <M-l> :wincmd l<CR>
+" nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
+" nnoremap <silent> <M-h> :wincmd h<CR>
+" nnoremap <silent> gj :WriteBufferIfNecessary<CR>:wincmd j<CR>
+" nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
+" nnoremap <silent> <M-k> :wincmd k<CR>
+" nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
+" nnoremap <silent> <M-l> :wincmd l<CR>
 
 "   4 Window Splits
 "
 "   -----------------
 "   g1 | g2 | g3 | g4
 "   -----------------
-nnoremap <silent> g1 :WriteBufferIfNecessary<CR>:wincmd t<CR>
-nnoremap <silent> g2 :WriteBufferIfNecessary<CR>:wincmd t<bar>:wincmd l<CR>
-nnoremap <silent> g3 :WriteBufferIfNecessary<CR>:wincmd t<bar>:wincmd l<bar>
-      \:wincmd l<CR>
-nnoremap <silent> g4 :WriteBufferIfNecessary<CR>:wincmd b<CR>
+" nnoremap <silent> g1 :WriteBufferIfNecessary<CR>:wincmd t<CR>
+" nnoremap <silent> g2 :WriteBufferIfNecessary<CR>:wincmd t<bar>:wincmd l<CR>
+" nnoremap <silent> g3 :WriteBufferIfNecessary<CR>:wincmd t<bar>:wincmd l<bar>
+      " \:wincmd l<CR>
+" nnoremap <silent> g4 :WriteBufferIfNecessary<CR>:wincmd b<CR>
 
 " Previous Window
-nnoremap <silent> gp :wincmd p<CR>
+" nnoremap <silent> gp :wincmd p<CR>
 " Equal Size Windows
-nnoremap <silent> g= :wincmd =<CR>
+" nnoremap <silent> g= :wincmd =<CR>
 " Swap Windows
-nnoremap <silent> gx :wincmd x<CR>
+" nnoremap <silent> gx :wincmd x<CR>
 
 " ---------------
 " Modifer Mappings
@@ -112,22 +112,23 @@ inoremap jK <Esc>
 " ---------------
 
 " Clear search
-noremap <silent><leader>/ :nohls<CR>
+" noremap <silent><leader>/ :nohls<CR>
 
 " Highlight search word under cursor without jumping to next
-nnoremap <leader>h *<C-O>
+" nnoremap <leader>h *<C-O>
 
 " Toggle spelling mode with ,s
-nnoremap <silent> <leader>s :set spell!<CR>
+" nnoremap <silent> <leader>s :set spell!<CR>
 
 " Quickly switch to last buffer
-nnoremap <leader>, :e#<CR>
+nnoremap <leader><leader> :e#<CR>
+nnoremap <D-e> :e#<CR>
 
 " Underline the current line with '-'
-nnoremap <silent> <leader>ul :t.\|s/./-/\|:nohls<cr>
+" nnoremap <silent> <leader>ul :t.\|s/./-/\|:nohls<cr>
 
 " Underline the current line with '='
-nnoremap <silent> <leader>uul :t.\|s/./=/\|:nohls<cr>
+" nnoremap <silent> <leader>uul :t.\|s/./=/\|:nohls<cr>
 
 " Surround the commented line with lines.
 "
@@ -137,19 +138,19 @@ nnoremap <silent> <leader>uul :t.\|s/./=/\|:nohls<cr>
 "          # --------
 "          # Test 123
 "          # --------
-nnoremap <silent> <leader>cul :normal "lyy"lpwvLr-^"lyyk"lP<cr>
+" nnoremap <silent> <leader>cul :normal "lyy"lpwvLr-^"lyyk"lP<cr>
 
 " Format the entire file
-nnoremap <leader>fef mx=ggG='x
+" nnoremap <leader>fef mx=ggG='x
 
 " Format a json file with Python's built in json.tool.
 " from https://github.com/spf13/spf13-vim/blob/3.0/.vimrc#L390
-nnoremap <leader>jt <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
-nnoremap <leader>jts <Esc>:%!underscore print --strict<CR><Esc>:set filetype=json<CR>
+" nnoremap <leader>jt <Esc>:%!underscore print<CR><Esc>:set filetype=json<CR>
+" nnoremap <leader>jts <Esc>:%!underscore print --strict<CR><Esc>:set filetype=json<CR>
 
 " Split window vertically or horizontally *and* switch to the new split!
-nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>:wincmd =<CR>
-nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
+" nnoremap <silent> <leader>hs :split<Bar>:wincmd j<CR>:wincmd =<CR>
+" nnoremap <silent> <leader>vs :vsplit<Bar>:wincmd l<CR>:wincmd =<CR>
 
 " Close the current window
 nnoremap <silent> <m-w> :close<CR>
@@ -191,3 +192,44 @@ if has("mac") || has("gui_macvim") || has("gui_mac")
   " directory name (/something/src)
   nnoremap <silent> <leader>yd :let @*=expand("%:p:h")<CR>
 endif
+
+
+
+" No arrow keys for movement!
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+" working with split windows
+nnoremap <C-h> <C-w>h
+nnoremap <leader>H <C-w>h :q<cr>
+nnoremap <C-j> <C-w>j
+nnoremap <leader>J <C-w>j :q<cr>
+nnoremap <C-k> <C-w>k
+nnoremap <leader>K <C-w>k :q<cr>
+nnoremap <C-l> <C-w>l
+nnoremap <leader>L <C-w>l :q<cr>
+
+" open vertical window and switch to it
+nnoremap <D-d> <C-w>v<C-w>l
+" open horizontal window and switch to it
+nnoremap <D-D> <C-w>s<C-w>j
+
+" open .vim directory in split window
+nnoremap <leader>vv <C-w><C-v><C-l>:e ~/.vim<cr>
+
+" Up/Down in quick fix windows
+nnoremap <D-j> :cnext<cr>
+nnoremap <D-k> :cprevious<cr>
+
+" resize current buffer by +/- 5
+nnoremap <D-left> :vertical resize -5<cr>
+nnoremap <D-down> :resize +5<cr>
+nnoremap <D-up> :resize -5<cr>
+nnoremap <D-right> :vertical resize +5<cr>
+
