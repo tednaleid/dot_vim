@@ -7,13 +7,14 @@ endif
 let g:ctrlp_map = ''
 
 " Ensure max height isn't too large. (for performance)
-let g:ctrlp_max_height = 15
+let g:ctrlp_max_height = 10
 " Fix fix new windows opening in split from startify
 let g:ctrlp_reuse_window = 'startify'
 let g:ctrlp_mruf_max = 350
 let g:ctrlp_mruf_default_order = 0
 
 " Leader Commands
+nnoremap <C-p> :CtrlPRoot<CR>
 nnoremap <leader>t :CtrlPRoot<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>u :CtrlPCurFile<CR>

@@ -7,15 +7,6 @@
 let mapleader=" "
 let maplocalleader = "\\"
 
-" -----------------------
-" Unmapped While Learning
-" -----------------------
-
-" No-op ^ and $ while learning H and L
-noremap ^ <nop>
-noremap $ <nop>
-nnoremap <leader>sc <nop>
-
 " ---------------
 " Regular Mappings
 " ---------------
@@ -121,8 +112,8 @@ inoremap jK <Esc>
 " nnoremap <silent> <leader>s :set spell!<CR>
 
 " Quickly switch to last buffer
-nnoremap <leader><leader> :e#<CR>
-nnoremap <D-e> :e#<CR>
+" nnoremap <leader><leader> :e#<CR>
+" nnoremap <D-e> :e#<CR>
 
 " Underline the current line with '-'
 " nnoremap <silent> <leader>ul :t.\|s/./-/\|:nohls<cr>
