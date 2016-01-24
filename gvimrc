@@ -1,5 +1,8 @@
 " Unmap these keys so they can be used for other mappings.
 if has('gui_macvim')
+
+  set guifont=Menlo:h18
+
   " D-t
   macmenu &File.New\ Tab key=<nop>
   " D-p
