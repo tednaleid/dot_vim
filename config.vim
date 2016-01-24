@@ -24,6 +24,8 @@ if has('persistent_undo')
   set undodir=~/.vim/.undo
 endif
 
+set noswapfile
+
 " ---------------
 " UI
 " ---------------
